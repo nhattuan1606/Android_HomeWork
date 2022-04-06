@@ -11,40 +11,45 @@
         android:layout_height="wrap_content"
         android:background="@color/design_default_color_primary"
         android:padding="@dimen/padding_regular"
+        android:layout_margin="16dp"
         android:text="@string/article_title"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="@color/white"
         android:textStyle="bold" />
 
-    <ScrollView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/article_heading">
+        android:layout_below="@+id/article_heading"
+        android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/article_subheading"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_weight="1"
+            android:padding="@dimen/padding_regular"
+            android:layout_marginStart="16dp"
+            android:text="@string/article_subheading"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
 
-            <TextView
-                android:id="@+id/article_subheading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/padding_regular"
-                android:text="@string/article_subheading"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
 
             <TextView
                 android:id="@+id/article"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:lineSpacingExtra="@dimen/line_spacing"
                 android:padding="@dimen/padding_regular"
+                android:layout_marginEnd="16dp"
                 android:text="@string/article_text" />
 
-        </LinearLayout>
+        </ScrollView>
 
-    </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>
