@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CodeLab02</string>
+    <string name="btnSendText">Send</string>
+    <string name="msg_hint">Enter your message</string>
+</resources>
