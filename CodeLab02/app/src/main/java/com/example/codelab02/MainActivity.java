@@ -1,5 +1,6 @@
 package com.example.codelab02;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         edtMsg = findViewById(R.id.msgText);
         tvRep = findViewById(R.id.textView);
 
+        if (savedInstanceState != null) {
+            tvRep.setText(savedInstanceState.getString("reply_content"));
+        }
+
         btnSend.setOnClickListener(v -> {
             Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
             myIntent.putExtra(EXTRA_MESSAGE, edtMsg.getText().toString());
@@ -46,5 +51,14 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(myIntent, TEXT_REQUEST);
         });
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        String strContent = tvRep.getText().toString();
+
+        outState.putString("reply_content", strContent);
     }
 }

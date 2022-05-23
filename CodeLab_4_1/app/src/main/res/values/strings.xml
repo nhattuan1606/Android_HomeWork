@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CodeLab_4_1</string>
+    <string name="donut">Donuts are glazed and sprinkled with candy</string>
+    <string name="ice_cream">Ice cream sandwiches have chocolate wafers and vanilla filling</string>
+    <string name="froyo">FroYo is premium self-serve frozen yogurt</string>
+    <string name="name_label">Name:</string>
+    <string name="phone_label">Phone:</string>
+    <string name="radio_1">Same day messenger service</string>
+    <string name="radio_2">Next day ground delivery</string>
+    <string name="radio_3">Pick up</string>
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+</resources>
