@@ -44,14 +44,12 @@
 
     <EditText
         android:id="@+id/editTexPhone"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -91,14 +89,13 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="120dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintStart_toEndOf="@+id/editTexPhone"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
